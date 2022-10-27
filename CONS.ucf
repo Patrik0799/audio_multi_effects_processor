@@ -1,0 +1,70 @@
+
+// --- CLOCK = 50MHz ---
+
+NET "clock" LOC = "C9" | IOSTANDARD = LVCMOS33 ;
+
+
+// --- ADC ---
+NET "adconv" LOC = "P11" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 6 ;
+
+
+// --- AMP ---
+
+NET "ampcs" LOC = "N7" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 6 ;
+
+NET "ampshdn" LOC = "P7" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 6 ;
+
+
+// --- DAC ---
+
+NET "dacclr" LOC = "P8" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;
+
+NET "daccs" LOC = "N8" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;
+
+
+// --- SPI ---
+
+// DISABLE -->
+
+NET "fpgainitb" LOC = "T3" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 4 ;
+
+NET "sf_ce0" LOC = "D16" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 4 ;
+
+NET "spissb" LOC = "U3" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 6 ;
+
+// <--- 
+
+NET "mosi" LOC = "T4" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;
+
+NET "miso" LOC = "N10" | IOSTANDARD = LVCMOS33 ;
+
+NET "sck" LOC = "U16" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;
+
+NET "ready" LOC = "F9" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+
+// --- Switch --- / Rot
+
+NET "swDIS" LOC = "L14" | IOSTANDARD = LVTTL | PULLUP;
+
+NET "swDEL" LOC = "N17" | IOSTANDARD = LVTTL | PULLUP;
+
+NET "swECHO" LOC = "L13" | IOSTANDARD = LVTTL | PULLUP ;
+
+NET "swREVERB" LOC = "H18" | IOSTANDARD = LVTTL | PULLUP ;
+
+NET "rot_a" LOC = "K18" | IOSTANDARD = LVTTL | PULLUP;
+
+NET "rot_b" LOC = "G18" | IOSTANDARD = LVTTL | PULLUP;
+
+
+
+// --- LED ---
+
+//NET "led[0]" LOC = "F12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+//NET "led[1]" LOC = "E12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+//NET "led[2]" LOC = "E11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+//NET "led[3]" LOC = "F11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+//NET "led[4]" LOC = "C11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+//NET "led[5]" LOC = "D11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+//NET "led[6]" LOC = "E9" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+//NET "led[7]" LOC = "F9" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
